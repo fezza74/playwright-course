@@ -1,0 +1,22 @@
+{
+  "name": "playwright-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --headed",
+    "test_without_browser": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.47.1",
+    "@types/node": "^22.7.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-fetch": "^2.6.7",
+    "uuid": "^9.0.0"
+  }
+}
