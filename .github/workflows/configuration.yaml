@@ -17,7 +17,7 @@ jobs:
             - name: Run tests
               run: |
                 echo "Start the shopping application"
-                chmod + ./shopping-store-linux-amd64 && ./shopping-store-linux-amd64 &
+                chmod +x ./shopping-store-linux-amd64 && ./shopping-store-linux-amd64 &
                 echo "Install dependencies"
                 npm ci
                 echo "Run Application tests"
