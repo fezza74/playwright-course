@@ -1,0 +1,24 @@
+name: Playwright Course Test
+on:
+    push: 
+        branches: [ development ]
+jobs:
+    nodejs-playwright-project:
+        runs-on: ubuntu-latest
+        container: 
+            image: mcr.microsoft.com/playwright:v1.47.2-noble
+            env:
+                URL: ${{ secrets.URL }}
+                ADMIN_USER: ${{ secrets.ADMIN_USER }}
+                ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+        steps:
+            - name: Checkout Repositori
+              uses: actions/checkout@v4
+            - name: Run tests
+              run: |
+                echo "Start the shopping application"
+                chmod + ./shopping-store-linux-amd64 && ./shopping-store-linux-amd64 &
+                echo "Install dependencies"
+                npm ci
+                echo "Run Application tests"
+                npm run test:ci

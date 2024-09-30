@@ -2,5 +2,7 @@ node_modules/
 /test-results/
 /playwright-report/
 /playwright/.cache/
-shopping-store-mac-arm64
+shopping-store-mac-amd64
 .env
+.vscode
+/blob-report/

@@ -5,18 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test --headed",
-    "test_without_browser": "playwright test"
+    "test:ci": "playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.47.1",
+    "@playwright/test": "^1.47.2",
     "@types/node": "^22.7.3"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
     "node-fetch": "^2.6.7",
+    "playwright": "^1.47.2",
     "uuid": "^9.0.0"
   }
 }
